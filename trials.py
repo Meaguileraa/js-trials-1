@@ -17,17 +17,31 @@ def get_all_evens(nums):
         if num %2 ==0:
             even_numbers.append(num)
     return even_numbers
-get_all_evens([7, 8, 10, 1, 2, 2])
-
+print(get_all_evens([7, 8, 10, 1, 2, 2]))
 
 
 
 def get_odd_indices(items):
-    pass  # TODO: replace this line with your code
+    odd_indices = []
+
+    for idx, item in enumerate(items):
+        if idx % 2 != 0:
+            odd_indices.append(idx)
+
+    return odd_indices
+print(get_odd_indices([1, 'hello', True, 500]))
+
 
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    num = 1
+
+    for item in items:
+        print(f'{num}. {item}')
+        num += 1
+print_as_numbered_list([1, 'hello', True])
+
+
 
 
 def get_range(start, stop):
