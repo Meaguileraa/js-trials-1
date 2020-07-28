@@ -43,13 +43,28 @@ print_as_numbered_list([1, 'hello', True])
 
 
 
-
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    nums = []
+
+    for num in range(start, stop):
+        nums.append(digit)
+    return nums
+print(get_range(0,5))
+
 
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+    chars = []
+
+    for letter in word:
+        if letter in 'aeiou':
+            chars.append('*')
+        else:
+            chars.append(letter)
+
+    return ''.join(chars)
+print(censor_vowels('hello world'))
+
 
 
 def snake_to_camel(string):
