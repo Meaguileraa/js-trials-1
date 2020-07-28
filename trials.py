@@ -47,7 +47,7 @@ def get_range(start, stop):
     nums = []
 
     for num in range(start, stop):
-        nums.append(digit)
+        nums.append(num)
     return nums
 print(get_range(0,5))
 
@@ -68,11 +68,27 @@ print(censor_vowels('hello world'))
 
 
 def snake_to_camel(string):
-    pass  # TODO: replace this line with your code
+    camel_case = []
+
+    for word in string.split('_'):
+        camel_case.append(f'{word[0].upper()}{word[1:]}')
+
+    return ''.join(camel_case)
+print(snake_to_camel('hello_world'))
+
 
 
 def longest_word_length(words):
-    pass  # TODO: replace this line with your code
+    longest = len(words[0])
+
+    for word in words:
+        if longest < len(word):
+            longest = len(word)
+    return longest
+
+print(longest_word_length(['jellyfish', 'zebra']))
+
+
 
 
 def truncate(string):
